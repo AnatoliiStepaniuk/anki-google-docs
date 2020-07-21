@@ -11,6 +11,7 @@ def main():
         for url in f.readlines():
             document = gdocs().get(documentId=document_id(url)).execute()
             add_note(document.get('title'), html_link(url))
+            print('Added ' + document.get('title'))
 
 if __name__ == '__main__':
     main()
