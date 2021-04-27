@@ -1,6 +1,7 @@
 from anki import update_note
 from anki import find_notes
 from anki import notes_info
+from anki import embed_url
 
 
 def main():
@@ -19,7 +20,7 @@ def transform_value(value):
     first = value.find('<a href="')+len('<a href="')
     last = value.find('"', first)
     url = value[first:last]
-    return f'<embed height="800px" src="{url}" type="text/html" width="100%">'
+    return embed_url(url)
 
 
 if __name__ == '__main__':

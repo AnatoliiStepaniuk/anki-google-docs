@@ -78,3 +78,7 @@ def notes_info(note_id):
 
 def html_link(url):
     return f'<a href="{url}">LINK</a>'
+
+
+def embed_url(url):
+    return f'<embed height="800px" src="{url}" type="text/html" width="100%">'
